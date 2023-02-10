@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>BestWestFest</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/tickets.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a href="lineup.html">Line Up</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="tickets active" href="#tickets">Tickets</a>
+        </div>
+
+        <div class="main">
+            <div class="title">Best<span>West</span>Fest</div>
+
+            <div class="content">
+                <div class="left-column">
+                    <div class="form-container">
+                        <form name="mainForm" action="">
+                            <div class="form-div">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="name" name="name" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="email" name="email" placeholder="JohnDoe@email.com">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="phoneNumber">Phone Number</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="01234567890">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="submit" value="Submit" onclick="validateForm()">
+                                </div>
+                            </div>
+                            <div class="form-div" id="booking-form">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="tickets"><h1 class="tickets-label">Ti<span>cke</span>ts</h1></label>
+                                    </div>
+                                    <div class="col-75">
+                                        <script src="js/tickets.js"></script>
+                                        <form name="booking">
+                                            <div class="booking-left">
+                                                <div>
+                                                    <p>Single day adult - £89</p>
+                                                    <select name="singleAdult" onChange="calculatePrice()" id="singleAdult">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                                <div style="padding-top:15px;">
+                                                    <p>Full weekend adult - £189</p>
+                                                    <select name="weekAdult" onChange="calculatePrice()" id="weekAdult">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="booking-right">
+                                                <div>
+                                                    <p>Single day child - £49</p>
+                                                    <select name="singleChild" onChange="calculatePrice()" id="singleChild">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                                <div style="padding-top:15px;">
+                                                    <p>Full weekend child - £109</p>
+                                                    <select name="weekChild" onChange="calculatePrice()" id="weekChild">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p>Total: </p><input type="text" id="totalPrice" placeholder="£0" readonly><form action="https://www.paypal.com/uk/home&quot; method="get">
+                                                <input type="submit" value="Go to payment"/>
+                                            </form>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <div class="right-column">
+                        <div class="form-div" id="infoSingle">
+                            <h1>Single <span>Day</span> Tickets</h1>
+                            <p>These tickets do not include camping.</p>
+                        </div>
+                        <div class="form-div" id="infoWeek">
+                            <h1>Full <span>Weekend</span> Tickets</h1>
+                            <p>These tickets include camping.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

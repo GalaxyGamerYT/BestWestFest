@@ -1,0 +1,68 @@
+.form-div {
+    padding: 25px;
+    background-color: #202020;
+    border-radius: 10px;
+    margin: 10px;
+    border-width: 3px;
+    border-color: #00ffff;
+    border-style: solid;
+    overflow: hidden;
+}
+
+#booking-form p {
+    text-align: center;
+}
+
+.tickets-label {
+    text-align: center;
+}
+
+.tickets-label span{color: #00ffff;}
+
+.left-column {
+    float: left;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.right-column {
+    float: right;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.booking-left {
+    float: left;
+    margin-left: 5px;
+}
+
+.booking-right {
+    float: right;
+    margin-right: 5px;
+}
+
+.row {
+    padding: 10px;
+    text-align: center;
+}
+
+.row label {
+    font-size: 20px;
+}
+
+#booking-form p {
+    font-size: 20px;
+}
+
+.info h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.info span {color: #00ffff;}
+
+.info p {
+    font-size: 20px;
+}
